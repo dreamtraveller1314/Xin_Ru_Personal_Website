@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +12,16 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 header {
@@ -35,6 +49,22 @@ nav a {
 
 nav a:hover {
     background-color: #e0e0e0;
+}
+
+nav a.nav-scratch {
+    background-color: transparent;
+    border: 2px solid #95a5a6;
+    color: #95a5a6;
+}
+
+nav a.nav-scratch:hover {
+    background-color: #95a5a6;
+    color: white;
+}
+
+nav a.active {
+    background-color: #3498db;
+    color: white;
 }
 
 main {
@@ -127,4 +157,67 @@ main > p {
 
 .project-info a:hover {
     background-color: #7f8c8d;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    margin-top: 80px;
+}
+
+footer_but {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+footer_but a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+footer_but a:hover {
+    background-color: #000000;
+}
+
+footer_but a.active {
+    background-color: #3498db;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 36px;
+    }
+    
+    main > p {
+        font-size: 18px;
+    }
+    
+    .main-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-buttons a {
+        width: 200px;
+        text-align: center;
+    }
+    
+    .project-card {
+        flex-direction: column;
+    }
+    
+    .project-card img {
+        width: 100%;
+    }
 }
