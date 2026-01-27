@@ -38,7 +38,9 @@ header {
     transition: transform 0.3s ease;
 }
 
-
+header.hidden {
+    transform: translateY(-100%);
+}
 
 nav {
     max-width: 1200px;
