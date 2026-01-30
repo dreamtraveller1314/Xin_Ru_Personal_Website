@@ -233,10 +233,9 @@ main {
 
 footer {
     background-color: #2d3436;
-    color: white;
-    text-align: center;
-    padding: 20px 20px;
-    margin-top: 80px;
+    padding: 30px 20px;
+    margin-top: 20px;
+    border-top: 1px solid #404040;
 }
 
 footer_but {
