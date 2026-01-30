@@ -109,3 +109,9 @@ document.addEventListener('keydown', function(e) {
         closeModal();
     }
 });
+
+//chill
+function playSound(id) {
+  var music = document.getElementById(id);
+  music.play();
+}
