@@ -80,7 +80,7 @@
     display: flex;
     align-items: flex-start;
     gap: 15px;
-    background-color: #ffffff;
+    background-color: #FFF0F3;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
@@ -95,7 +95,7 @@
 .info-item h3 {
     font-size: 16px;
     font-weight: 600;
-    color: #636e72;
+    color: #2d3436;
     margin-bottom: 5px;
 }
 
@@ -106,18 +106,18 @@
 }
 
 .info-item a {
-    color: #D4757F;
+    color: #2d3436;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .info-item a:hover {
-    color: #E8989F;
+    color: #2d3436;
     text-decoration: underline;
 }
 
 .education-card {
-    background-color: #ffffff;
+    background-color: #FFF0F3;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
@@ -133,7 +133,7 @@
 
 .education-card .year {
     font-size: 16px;
-    color: #636e72;
+    color: #2d3436;
     font-weight: 500;
 }
 
