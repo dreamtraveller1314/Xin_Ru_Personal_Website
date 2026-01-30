@@ -12,3 +12,26 @@ window.addEventListener('scroll', function() {
     
     lastScrollTop = scrollTop;
 });
+
+
+//portfolio
+const slider = document.querySelector('.achievements-slider');
+const prevBut = document.querySelector('.prev-but');
+const nextBut = document.querySelector('.next-but');
+
+if (slider && prevBut && nextBut) {
+    const slideWidth = 320;
+    
+    nextBut.addEventListener('click', function() {
+        slider.scrollBy({
+            left: slideWidth,
+            behavior: 'smooth'
+        });
+    });
+    prevBut.addEventListener('click', function() {
+        slider.scrollBy({
+            left: -slideWidth,
+            behavior: 'smooth'
+        });
+    });
+}
