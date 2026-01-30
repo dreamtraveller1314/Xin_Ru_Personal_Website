@@ -101,12 +101,12 @@
 
 .info-item p {
     font-size: 16px;
-    color: #2d3436;
+    color: #636e72;
     margin: 0;
 }
 
 .info-item a {
-    color: #2d3436;
+    color: #636e72;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -133,7 +133,7 @@
 
 .education-card .year {
     font-size: 16px;
-    color: #2d3436;
+    color: #636e72;
     font-weight: 500;
 }
 
