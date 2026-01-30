@@ -214,7 +214,7 @@
                         <span class="tech-tag">FTC SDK</span>
                         <span class="tech-tag">Autonomous Programming</span>
                     </div>
-                    <a href="https://drive.google.com/file/d/1SuLN-XCtBMETRn_qsCHXv-fnzuAgq0RP/view" target="_blank" class="project-link">Watch Match Video</a>
+                    <a href="#" class="project-link" data-project="ftc-video"> Watch Match Video</a>
                 </div>
                 
                 <div class="project">
@@ -229,7 +229,7 @@
                         <span class="tech-tag">GDScript</span>
                         <span class="tech-tag">2D Game Design</span>
                     </div>
-                    <a href="https://dreamtraveller1314.itch.io/castle-of-shadows" target="_blank" class="project-link">Play Game!</a>
+                    <a href="#" class="project-link" data-project="castle-game">Play Game</a>
                 </div>
                 
                 <div class="project">
@@ -244,7 +244,7 @@
                         <span class="tech-tag">3D Modeling</span>
                         <span class="tech-tag">Product Design</span>
                     </div>
-                    <a href="https://cad.onshape.com/documents/89a440595dc51c5ae372007d" target="_blank" class="project-link">View CAD Model</a>
+                    <a href="#" class="project-link" data-project="cad-mouse">View CAD Model</a>
                 </div>
                 
                 <div class="project">
@@ -259,13 +259,13 @@
                         <span class="tech-tag">Game Design</span>
                         <span class="tech-tag">Educational</span>
                     </div>
-                    <a href="https://scratch.mit.edu/projects/543620844/" target="_blank" class="project-link">Play Game</a>
+                    <a href="#" class="project-link" data-project="scratch-game">Play Game</a>
                 </div>
             </section>
 
             <section class="resume-section">
                 <a href="img/Lim Xin Ru_Resume.pdf" class="resume-download" download>
-                    📄 Download Full Resume (PDF)
+                    Download Full Resume (PDF)
                 </a>
             </section>
         </div>
@@ -279,6 +279,14 @@
             <a href="scratch.html">Scratch Class</a>
         </footer_but>
     </footer>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2 class="modal-title" id="modal-title"></h2>
+            <div id="modal-embed-container"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 
