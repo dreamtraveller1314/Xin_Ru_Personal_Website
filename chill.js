@@ -1,4 +1,17 @@
 document.querySelectorAll('.instrument-card').forEach(card => {
+    //button
+    const slider = document.querySelector('.food-slider');
+    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+
+    nextBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: 330, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -330, behavior: 'smooth' });
+    });
+    
     const expandBut = card.querySelector('.expand-but');
     const closeBut = card.querySelector('.close-but');
     
@@ -49,7 +62,7 @@ async function getMyPlaylists() {
         const token = await getSpotifyToken();
         const playlistIds = [
             '3rM77Ke8uNTm3m0yybZOPD',
-            '2onoqoukPHwVsB4ChZKq3S'
+            '4oESRLKGsZnyhLWUVmH2cg'
         ];
         const playlistPromises = playlistIds.map(id => 
             fetch(`https://api.spotify.com/v1/playlists/${id}`, {
@@ -159,3 +172,4 @@ async function loadGitHubRepos() {
 if (document.getElementById('github-repos')) {
     loadGitHubRepos();
 }
+

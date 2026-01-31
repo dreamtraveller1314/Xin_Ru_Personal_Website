@@ -513,18 +513,41 @@ footer_but a.active {
     transform: translateY(-2px);
 }
 
-.food-slider {
+.slider-wrapper {
+    position: relative;
     display: flex;
-    overflow-x: auto; 
-    gap: 25px;
-    padding: 20px 10px;
-    scroll-snap-type: x mandatory; 
-    -webkit-overflow-scrolling: touch; 
+    align-items: center;
 }
 
-.food-slider::-webkit-scrollbar {
-    display: none;
+.food-slider {
+    display: flex;
+    overflow-x: hidden;
+    gap: 25px;
+    padding: 20px 10px;
+    scroll-behavior: smooth;
+    width: 100%;
 }
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FFB5A7;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.prev-btn { left: -20px; }
+.next-btn { right: -20px; }
+
+.nav-btn:hover { background: #8B7355; }
 
 .food-card {
     min-width: 300px;
