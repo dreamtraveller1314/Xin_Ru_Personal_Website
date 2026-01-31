@@ -136,10 +136,7 @@ function displayGitHubRepos(repos) {
             </div>
             <p class="repo-description">${repo.description || 'No description available.'}</p>
             ${repo.language ? `<span class="repo-language">${repo.language}</span>` : ''}
-            <div class="repo-stats">
-                <span class="repo-stat">⭐ ${repo.stargazers_count}</span>
-                <span class="repo-stat">🔱 ${repo.forks_count}</span>
-            </div>
+            <br>
             <a href="${repo.html_url}" target="_blank" class="repo-link">View on GitHub</a>
         `;
         

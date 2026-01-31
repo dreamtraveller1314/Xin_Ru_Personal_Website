@@ -419,20 +419,6 @@ footer_but a.active {
     min-height: 40px;
 }
 
-.repo-stats {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
-    font-size: 13px;
-    color: #C4A77D;
-}
-
-.repo-stat {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
 .repo-language {
     display: inline-block;
     background: #FFE5D0;
