@@ -275,3 +275,89 @@ footer_but a.active {
 .fun-fact strong {
     color: #E8989F;
 }
+
+.section-description {
+    text-align: center;
+    font-size: 16px;
+    color: #C4A77D;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.spotify-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.loading {
+    text-align: center;
+    font-size: 20px;
+    color: #C4A77D;
+    padding: 60px 20px;
+    grid-column: 1 / -1;
+}
+
+.playlist-card {
+    background: #FFF8F0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(196, 167, 125, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #FFB5A7;
+}
+
+.playlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(196, 167, 125, 0.25);
+}
+
+.playlist-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.playlist-info {
+    padding: 20px;
+}
+
+.playlist-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #8B7355;
+    margin-bottom: 8px;
+}
+
+.playlist-description {
+    font-size: 14px;
+    color: #C4A77D;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.playlist-tracks {
+    font-size: 13px;
+    color: #C4A77D;
+    margin-bottom: 15px;
+}
+
+.playlist-link {
+    display: inline-block;
+    background-color: #FFB5A7;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.playlist-link:hover {
+    background-color: #FF9F8E;
+    transform: translateY(-2px);
+}
