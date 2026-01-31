@@ -66,28 +66,30 @@ function displayPlaylists(playlists) {
     const container = document.getElementById('spotify-playlists');
     
     if (playlists.length === 0) {
-        container.innerHTML = '<p class="loading">Could not load playlists. Please check your API credentials.</p>';
+        container.innerHTML = '<p class="loading">Could not load players.</p>';
         return;
     }
-    
-    container.innerHTML = '';
-    
+    container.innerHTML = ''; 
     playlists.forEach(playlist => {
         const card = document.createElement('div');
         card.className = 'playlist-card';
-        
         card.innerHTML = `
-            <img src="${playlist.images[0]?.url || 'images/placeholder.jpg'}" alt="${playlist.name}" class="playlist-image">
+            <div class="player-container">
+                <iframe 
+                    src="https://open.spotify.com/embed/playlist/${playlist.id}?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="380" 
+                    frameBorder="0" 
+                    allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                </iframe>
+            </div>
             <div class="playlist-info">
                 <h3 class="playlist-name">${playlist.name}</h3>
-                <p class="playlist-description">${playlist.description || 'A great playlist!'}</p>
-                <p class="playlist-tracks">${playlist.tracks.total} tracks</p>
-                <a href="${playlist.external_urls.spotify}" target="_blank" class="playlist-link">
-                    ▶️ Play on Spotify
-                </a>
+                <p class="playlist-description">Click play above to listen!</p>
             </div>
         `;
-        
         container.appendChild(card);
     });
 }

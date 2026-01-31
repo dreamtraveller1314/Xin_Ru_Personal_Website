@@ -299,7 +299,7 @@ footer_but a.active {
 }
 
 .playlist-card {
-    background: #FFF8F0;
+    background: inear-gradient(135deg, #FFE5D0 0%, #FFD4B8 100%);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(196, 167, 125, 0.15);
@@ -310,16 +310,6 @@ footer_but a.active {
 .playlist-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(196, 167, 125, 0.25);
-}
-
-.playlist-image {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-}
-
-.playlist-info {
-    padding: 20px;
 }
 
 .playlist-name {
@@ -339,27 +329,16 @@ footer_but a.active {
     overflow: hidden;
 }
 
-.playlist-tracks {
-    font-size: 13px;
-    color: #C4A77D;
-    margin-bottom: 15px;
+.spotify-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
 }
 
-.playlist-link {
-    display: inline-block;
-    background-color: #FFB5A7;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-.playlist-link:hover {
-    background-color: #FF9F8E;
-    transform: translateY(-2px);
+.playlist-info {
+    padding: 15px;
+    text-align: center;
 }
 
 .subsection-title {
