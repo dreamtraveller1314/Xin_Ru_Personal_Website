@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xin Ru - Chill</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chill.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="chill.html" class="active">Chill</a>
+            <a href="scratch.html" class="nav-scratch">Scratch Class</a>
+        </nav>
+    </header>
+
+    <main class="chill-main">
+        <section class="chill-hero">
+            <div class="hero-content">
+                <h1>Welcome to My Chill Zone</h1>
+                <p>Beyond code and robots — here's what makes me, me!</p>
+            </div>
+        </section>
+
+        <div class="chill-content">
+            <section class="chill-section instruments-section">
+                <h2>Instruments I Play</h2>
+                <div class="instruments-grid">
+                    <div class="instrument-card" data-instrument="erhu">
+                        <div class="instrument-front">
+                            <img src="img/image-removebg-preview (3).png" alt="Erhu" class="instrument-icon-img">
+                            <h3>Erhu</h3>
+                            <p>Chinese Tradisional Music Instrument</p>
+                            <button class="expand-but">Learn More</button>
+                        </div>
+                        <div class="instrument-back">
+                            <button class="close-but">&times;</button>
+                            <h3>Erhu (二胡)</h3>
+                            <p>A traditional Chinese two-stringed bowed instrument. Known for its emotional, expressive sound that can mimic the human voice.</p>
+                            <audio controls class="instrument-audio">
+                                <source src="img/erhu.MP3" type="audio/mpeg">
+                            </audio>
+                            <div class="fun-fact">
+                                <strong>Fun fact:</strong> I play this in Chinese Orchestra!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instrument-card" data-instrument="frenchhorn">
+                        <div class="instrument-front">
+                            <img src="img/image-removebg-preview (2).png" alt="French Horn" class="instrument-icon-img">
+                            <h3>French Horn</h3>
+                            <p>Brass instrument in the horn family</p>
+                            <button class="expand-but">Learn More</button>
+                        </div>
+                        <div class="instrument-back">
+                            <button class="close-but">&times;</button>
+                            <h3>French Horn</h3>
+                            <p>A brass instrument with a beautiful, warm tone. It has over 12 feet of tubing coiled into a compact shape!</p>
+                            <audio controls class="instrument-audio">
+                                <source src="img/horn.MP3" type="audio/mpeg">
+                            </audio>
+                            <div class="fun-fact">
+                                <strong>Fun fact:</strong> I play this in Wind Orchestra!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instrument-card" data-instrument="ukulele">
+                        <div class="instrument-front">
+                            <img src="img/image-removebg-preview (4).png" alt="Ukulele" class="instrument-icon-img">
+                            <h3>Ukulele</h3>
+                            <p>Four-stringed instrument</p>
+                            <button class="expand-but">Learn More</button>
+                        </div>
+                        <div class="instrument-back">
+                            <button class="close-but">&times;</button>
+                            <h3>Ukulele</h3>
+                            <p>A small, four-stringed instrument of Portuguese origin popularized in Hawaii, belonging to the lute family</p>
+                            <audio controls class="instrument-audio">
+                                <source src="img/ukulele.MP3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="instrument-card" data-instrument="keyboard">
+                        <div class="instrument-front">
+                            <img src="img/image-removebg-preview (5).png" alt="Keyboard" class="instrument-icon-img">
+                            <h3>Keyboard</h3>
+                            <p>Digital Piano</p>
+                            <button class="expand-but">Learn More</button>
+                        </div>
+                        <div class="instrument-back">
+                            <button class="close-but">&times;</button>
+                            <h3>Keyboard/Piano</h3>
+                            <p>The foundation of music! Can play melody, harmony, and rhythm all at once. Perfect for composing and arranging.</p>
+                            <audio controls class="instrument-audio">
+                                <source src="img/keyboard.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <footer_but>
+            <a href="index.html" >Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="chill.html" class="active">Chill</a>
+            <a href="scratch.html">Scratch Class</a>
+        </footer_but>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chill.js"></script>
+</body>
+</html>
