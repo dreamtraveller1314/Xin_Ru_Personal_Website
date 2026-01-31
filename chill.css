@@ -351,6 +351,38 @@ footer_but a.active {
     border-left: 5px solid #FFB5A7;
 }
 
+.contribution-container {
+    background: #FFF8F0;
+    border: 3px solid #FFB5A7;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    overflow-x: auto;
+}
+
+#github-contributions {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    
+    padding: 20px 0;
+    border-radius: 10px;
+    min-height: 150px;
+}
+
+#github-contributions img {
+    width: 150%;
+    max-width: 1000px;
+    height: auto;
+}
+
+.subsection-title {
+    color: #8B7355;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
