@@ -100,3 +100,58 @@ async function loadSpotifyPlaylists() {
 if (document.getElementById('spotify-playlists')) {
     loadSpotifyPlaylists();
 }
+
+//github api
+const GITHUB_USERNAME = 'dreamtraveller1314';
+
+async function getGitHubRepos() {
+    try {
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`);
+        const repos = await response.json();
+        return repos;
+    } catch (error) {
+        console.error('Error fetching GitHub repos:', error);
+        return [];
+    }
+}
+
+function displayGitHubRepos(repos) {
+    const container = document.getElementById('github-repos');
+    
+    if (repos.length === 0) {
+        container.innerHTML = '<p class="loading">No repositories found.</p>';
+        return;
+    }
+    
+    container.innerHTML = '';
+    
+    repos.forEach(repo => {
+        const card = document.createElement('div');
+        card.className = 'repo-card';
+        
+        card.innerHTML = `
+            <div class="repo-header">
+                <span class="repo-icon">📁</span>
+                <h3 class="repo-name">${repo.name}</h3>
+            </div>
+            <p class="repo-description">${repo.description || 'No description available.'}</p>
+            ${repo.language ? `<span class="repo-language">${repo.language}</span>` : ''}
+            <div class="repo-stats">
+                <span class="repo-stat">⭐ ${repo.stargazers_count}</span>
+                <span class="repo-stat">🔱 ${repo.forks_count}</span>
+            </div>
+            <a href="${repo.html_url}" target="_blank" class="repo-link">View on GitHub</a>
+        `;
+        
+        container.appendChild(card);
+    });
+}
+
+async function loadGitHubRepos() {
+    const repos = await getGitHubRepos();
+    displayGitHubRepos(repos);
+}
+
+if (document.getElementById('github-repos')) {
+    loadGitHubRepos();
+}
