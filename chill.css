@@ -512,3 +512,54 @@ footer_but a.active {
     background-color: #FF7028;
     transform: translateY(-2px);
 }
+
+.food-slider {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    gap: 25px;
+    padding: 20px 10px;
+    scroll-snap-type: x mandatory; /* Makes cards 'snap' into place */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iPhone */
+}
+
+/* Hide the scrollbar for a cleaner look */
+.food-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.food-card {
+    min-width: 300px;
+    background: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(255, 181, 167, 0.2);
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid #FFB5A7;
+}
+
+.food-card:hover {
+    transform: scale(1.02);
+}
+
+.food-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.food-info {
+    padding: 20px;
+}
+
+.food-info h3 {
+    color: #8B7355;
+    margin-bottom: 10px;
+}
+
+.food-info p {
+    color: #C4A77D;
+    font-size: 14px;
+    line-height: 1.5;
+}
