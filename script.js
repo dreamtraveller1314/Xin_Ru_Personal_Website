@@ -110,8 +110,3 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-//chill
-function playSound(id) {
-  var music = document.getElementById(id);
-  music.play();
-}

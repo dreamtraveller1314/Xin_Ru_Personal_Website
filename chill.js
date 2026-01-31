@@ -21,6 +21,11 @@ document.querySelectorAll('.instrument-card').forEach(card => {
     });
 });
 
+function playSound(id) {
+  var music = document.getElementById(id);
+  music.play();
+}
+
 //spotify api
 const SPOTIFY_CLIENT_ID = 'd7e14b6084f54019bd72bfa15c6a2e69';
 const SPOTIFY_CLIENT_SECRET = 'd386ef0aae8e424f996bc5259c5b4e4c';
