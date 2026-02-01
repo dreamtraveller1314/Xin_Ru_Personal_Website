@@ -301,29 +301,49 @@ footer_but a.active {
 }
 
 .contribution-container {
-    background: #FFF8F0;
-    border: 3px solid #FFB5A7;
-    border-radius: 16px;
-    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.contribution-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
-    text-align: center;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contribution-header .subsection-title {
+    margin: 0;
+}
+
+.last-updated {
+    font-size: 13px;
+    color: #C4A77D;
+    background: #FFE5D0;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-weight: 500;
 }
 
 #github-contributions {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    
-    padding: 20px 0;
-    border-radius: 10px;
-    min-height: 150px;
+    text-align: center;
+    padding: 30px;
+    background: #FFF8F0;
+    border-radius: 16px;
+    border: 3px solid #FFB5A7;
+    position: relative;
 }
 
 #github-contributions img {
-    width: 150%;
-    max-width: 1000px;
+    max-width: 100%;
     height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#github-contributions img.loaded {
+    opacity: 1;
 }
 
 .subsection-title {

@@ -44,7 +44,7 @@ const GITHUB_USERNAME = 'dreamtraveller1314';
 
 async function getGitHubRepos() {
     try {
-        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`);
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`);
         const repos = await response.json();
         return repos;
     } catch (error) {
@@ -91,3 +91,73 @@ if (document.getElementById('github-repos')) {
     loadGitHubRepos();
 }
 
+//contribution graph
+const CONTRIBUTION_REFRESH_INTERVAL = 60 * 60 * 1000;
+let refreshTimer = null;
+function getTimeString() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    return `${hours}:${minutes}`;
+}
+function refreshContributionGraph() {
+    const graphImg = document.getElementById('contribution-graph');
+    const lastUpdatedEl = document.getElementById('last-updated');
+    
+    if (graphImg) {
+        if (lastUpdatedEl) {
+            lastUpdatedEl.textContent = 'Updating...';
+        }
+        const baseUrl = 'https://ghchart.rshah.org/FFB5A7/dreamtraveller1314';
+        const timestamp = Date.now();
+        graphImg.classList.remove('loaded');
+        graphImg.src = `${baseUrl}?t=${timestamp}`;
+        graphImg.onload = function() {
+            this.classList.add('loaded');
+            if (lastUpdatedEl) {
+                lastUpdatedEl.textContent = `Updated at ${getTimeString()}`;
+            }
+            console.log('✅ Contribution graph refreshed at', getTimeString());
+        };
+        
+        graphImg.onerror = function() {
+            if (lastUpdatedEl) {
+                lastUpdatedEl.textContent = 'Failed to load';
+            }
+            console.error('❌ Failed to load contribution graph');
+        };
+    }
+}
+
+function startAutoRefresh() {
+    if (refreshTimer) {
+        clearInterval(refreshTimer);
+    }
+    refreshContributionGraph();
+    refreshTimer = setInterval(() => {
+        console.log('🔄 Auto-refreshing contribution graph...');
+        refreshContributionGraph();
+    }, CONTRIBUTION_REFRESH_INTERVAL);
+    
+    console.log(`✅ Auto-refresh started (every ${CONTRIBUTION_REFRESH_INTERVAL / 60000} minutes)`);
+}
+function stopAutoRefresh() {
+    if (refreshTimer) {
+        clearInterval(refreshTimer);
+        refreshTimer = null;
+        console.log('⏹️ Auto-refresh stopped');
+    }
+}
+if (document.getElementById('github-contributions')) {
+    startAutoRefresh();
+    window.addEventListener('beforeunload', stopAutoRefresh);
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            console.log('⏸️ Page hidden - pausing auto-refresh');
+            stopAutoRefresh();
+        } else {
+            console.log('▶️ Page visible - resuming auto-refresh');
+            startAutoRefresh();
+        }
+    });
+}
