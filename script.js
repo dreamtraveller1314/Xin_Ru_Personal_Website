@@ -71,6 +71,10 @@ const projectEmbeds = {
     'scratch-game': {
         title: 'Snake & Ladder - Scratch Game',
         embed: '<iframe src="https://scratch.mit.edu/projects/543620844/embed" width="100%" height="500" frameborder="0" allowfullscreen class="modal-embed"></iframe>'
+    },
+    'scratch-game-1': {
+        title: 'Castle of Shadows - Scratch Game',
+        embed: '<iframe src="https://scratch.mit.edu/projects/1067249356/embed" width="100%" height="500" frameborder="0" allowfullscreen class="modal-embed"></iframe>'
     }
 };
 
