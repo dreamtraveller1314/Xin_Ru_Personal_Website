@@ -127,19 +127,20 @@ header nav a.active::after {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .but-primary {
     display: inline-block;
     background-color: #FF8C1A;
     color: #FFFFFF;
-    padding: 16px 40px;
-    border-radius: 30px;
+    padding: 20px 60px;
+    border-radius: 35px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(255, 140, 26, 0.4);
+    box-shadow: 0 8px 25px rgba(255, 140, 26, 0.5);
 }
 
 .but-primary:hover {
