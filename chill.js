@@ -76,6 +76,8 @@ function displayGitHubRepos(repos) {
             ${repo.language ? `<span class="repo-language">${repo.language}</span>` : ''}
             <br>
             <a href="${repo.html_url}" target="_blank" class="repo-link">View on GitHub</a>
+            <br>
+            ${repo.homepage ? `<a href="${repo.homepage}" target="_blank" class="repo-link live-link">Try it out!</a>` : ''}
         `;
         
         container.appendChild(card);

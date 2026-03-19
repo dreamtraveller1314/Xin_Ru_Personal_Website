@@ -411,7 +411,7 @@ footer_but a.active {
 }
 
 .repo-link {
-    display: inline-block;
+   display: inline-block;
     background-color: #FFB5A7;
     color: #ffffff;
     padding: 10px 20px;
@@ -420,6 +420,7 @@ footer_but a.active {
     font-size: 14px;
     font-weight: 600;
     transition: all 0.3s ease;
+    margin-bottom: 10px;
 }
 
 .repo-link:hover {
