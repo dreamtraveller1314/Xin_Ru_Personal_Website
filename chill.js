@@ -163,3 +163,25 @@ if (document.getElementById('github-contributions')) {
         }
     });
 }
+
+const dramaSlider = document.querySelector('.drama-section .drama-grid');
+const dramaPrevBtn = document.querySelector('.drama-section .drama-prev-btn');
+const dramaNextBtn = document.querySelector('.drama-section .drama-next-btn');
+
+if (dramaSlider && dramaPrevBtn && dramaNextBtn) {
+    const dramaCardWidth = 345;
+    
+    dramaNextBtn.addEventListener('click', function() {
+        dramaSlider.scrollBy({
+            left: dramaCardWidth,
+            behavior: 'smooth'
+        });
+    });
+    
+    dramaPrevBtn.addEventListener('click', function() {
+        dramaSlider.scrollBy({
+            left: -dramaCardWidth,
+            behavior: 'smooth'
+        });
+    });
+}
